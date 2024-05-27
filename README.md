@@ -2,6 +2,7 @@
 -Aplicación on-line para el seguimiento de criptomonedas haciendo uso de Angular como Framework de desarrollo. https://cryptotracker-b1ef7.web.app/
 
 
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
 
 ## Development server
