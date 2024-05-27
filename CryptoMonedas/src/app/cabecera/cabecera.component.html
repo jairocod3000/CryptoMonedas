@@ -1,0 +1,25 @@
+<header class="navbar">
+  <nav class="navbar-container">
+    <a class="navbar-logo" routerLink="/">CryptoMonedas</a>
+    <div class="navbar-links">
+      <a routerLink="/">Inicio</a>
+      <ng-container *ngIf="authService.isAuthenticated(); else loggedOut">
+        <a routerLink="/portfolio">Portfolio</a>
+        <span>{{ authService.user?.email }}</span>
+        <button (click)="authService.signOut()">Cerrar Sesión</button>
+      </ng-container>
+      <ng-template #loggedOut>
+        <a routerLink="/login">Iniciar Sesión</a>
+      </ng-template>
+    </div>
+    <div class="navbar-toggle" (click)="toggleMenu()">
+      &#9776;
+    </div>
+  </nav>
+  <div class="navbar-menu" [class.active]="menuActive">
+    <a routerLink="/" (click)="toggleMenu()">Inicio</a>
+    <a *ngIf="authService.isAuthenticated()" routerLink="/portfolio" (click)="toggleMenu()">Portfolio</a>
+    <a routerLink="/login" (click)="toggleMenu()">Iniciar Sesión</a>
+  </div>
+</header>
+

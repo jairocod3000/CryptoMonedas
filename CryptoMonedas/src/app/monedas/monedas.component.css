@@ -1,0 +1,86 @@
+/*Estilos para el componente monedas*/
+.monedas-container {
+    padding: 2rem;
+    text-align: center;
+}
+
+.monedas-container h1 {
+    color:  white;
+    margin-top: 60px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+td {
+    cursor: pointer;
+    color: white;
+}
+
+img {
+    max-width: 50px;
+    height: auto;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    background-color: #ff4c4c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff0000;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .monedas-container {
+        padding: 1rem;
+    }
+
+    table, th, td {
+        font-size: 0.8rem;
+    }
+
+    th, td {
+        padding: 0.5rem;
+    }
+
+    img {
+        max-width: 30px;
+    }
+
+    button {
+        padding: 0.3rem 0.6rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .monedas-container, th, td {
+        text-align: center;
+    }
+}

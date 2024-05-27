@@ -1,0 +1,23 @@
+<div class="portfolio-container">
+  <h1>Portfolio</h1>
+  <p>Selecciona las criptomonedas que deseas seguir:</p>
+  <div class="crypto-list">
+    <div
+      class="crypto-item"
+      *ngFor="let crypto of cryptos"
+      [class.selected]="isSelected(crypto)"
+      (click)="toggleSelectCrypto(crypto)"
+    >
+      <img [src]="crypto.image" alt="{{crypto.name}}" />
+      <span>{{crypto.name}} ({{crypto.symbol.toUpperCase()}})</span>
+      <span>{{crypto.current_price | number:'1.2-2'}}</span>
+    </div>
+  </div>
+  <div class="selected-cryptos">
+    <h2>Criptomonedas Seleccionadas</h2>
+    <div *ngFor="let crypto of selectedCryptos" (click)="goToDetail(crypto.id)">
+      <span>{{crypto.name}} ({{crypto.symbol.toUpperCase()}})</span>
+    </div>
+  </div>
+</div>
+

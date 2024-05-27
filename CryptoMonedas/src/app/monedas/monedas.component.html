@@ -1,0 +1,33 @@
+<div class="monedas-container">
+  <h1>Monedas Seguidas</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Imagen</th>
+        <th>Nombre</th>
+        <th>Símbolo</th>
+        <th>Precio (EUR)</th>
+        <th>Capitalización (EUR)</th>
+        <th>Volumen (EUR)</th>
+        <th>24h Alto</th>
+        <th>24h Bajo</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let crypto of selectedCryptos" (click)="goToDetail(crypto.id)">
+        <td><img [src]="crypto.image" alt="{{crypto.name}}" /></td>
+        <td>{{crypto.name}}</td>
+        <td>{{crypto.symbol.toUpperCase()}}</td>
+        <td>{{crypto.current_price | number:'1.2-2'}}</td>
+        <td>{{crypto.market_cap | number:'1.2-2'}}</td>
+        <td>{{crypto.total_volume | number:'1.2-2'}}</td>
+        <td>{{crypto.high_24h | number:'1.2-2'}}</td>
+        <td>{{crypto.low_24h | number:'1.2-2'}}</td>
+        <td><button (click)="removeCrypto(crypto); $event.stopPropagation();">Dejar de Seguir</button></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+  

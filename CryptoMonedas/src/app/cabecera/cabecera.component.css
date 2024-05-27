@@ -1,0 +1,89 @@
+/* Estilos generales para la cabecera */
+.navbar {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  color: white;
+  text-decoration: none;
+}
+
+.navbar-links a {
+  color: white;
+  margin: 0 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+  margin-right: 60px;
+}
+
+.navbar-links a:hover {
+  color: #007bff;
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+.navbar-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  width: 100%;
+}
+
+.navbar-menu a {
+  padding: 1rem;
+  width: 100%;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-top: 1px solid #444;
+}
+
+.navbar-menu a:hover {
+  background-color: #444;
+}
+
+.navbar-menu.active {
+  display: flex;
+}
+
+button {
+  margin-right: 50px;
+  margin-left: 5px;
+  border-radius: 18px;
+  background-color: darkred;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+  }
+  .navbar-toggle {
+    display: block;
+  }
+}
+

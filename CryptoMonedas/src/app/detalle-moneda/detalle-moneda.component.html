@@ -1,0 +1,20 @@
+<div *ngIf="crypto" class="detalle-moneda-container">
+  <h1>{{ crypto.name }} ({{ crypto.symbol.toUpperCase() }})</h1>
+  <img [src]="crypto.image.large" alt="{{ crypto.name }}">
+  <p [innerHTML]="description"></p>
+  <div>
+    <h2>Links</h2>
+    <ul>
+      <li><a [href]="crypto.links.homepage[0]" target="_blank">Sitio web</a></li>
+      <li><a [href]="crypto.links.subreddit_url" target="_blank">Reddit</a></li>
+      <li><a [href]="crypto.links.repos_url.github[0]" target="_blank">Github</a></li>
+    </ul>
+  </div>
+  <div>
+    <h2>Información Adicional</h2>
+    <p>Fecha de Surgimiento: {{ crypto.genesis_date }}</p>
+    <p>Precio Actual: €{{ crypto.market_data.current_price.eur | number:'1.2-2' }}</p>
+  </div>
+  <!-- Contenedor del gráfico D3.js -->
+  <div #chart class="chart-container"></div>
+</div>

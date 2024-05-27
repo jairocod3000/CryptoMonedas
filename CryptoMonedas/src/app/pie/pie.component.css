@@ -1,0 +1,35 @@
+/* Estilos para el footer */
+.site-footer {
+    background-color: #222; 
+    color: #ccc; 
+    text-align: center; 
+    padding: 20px; 
+    font-size: 16px; 
+    border-top: 1px solid #444; 
+    border-radius: 10px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+  
+.footer-content {
+    max-width: 1200px; 
+    margin: auto; 
+}
+  
+.footer-links {
+    margin-top: 10px; 
+    display: flex; 
+    justify-content: center; 
+    gap: 20px; 
+}
+  
+.footer-links a {
+    cursor: pointer;
+    color: #ddd; 
+    text-decoration: none; 
+    transition: color 0.3s; 
+}
+  
+.footer-links a:hover {
+    color: #fff; 
+}
+  
